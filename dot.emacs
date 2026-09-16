@@ -53,6 +53,20 @@
 ;; (require 'julia-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.jl$" . julia-mode))
 
+;; python hooks
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (define-key python-mode-map (kbd "C-c C-o") 'python-invoke-build)))
+
+(defun python-invoke-build()
+  "run invoke build"
+  (interactive)
+  (compile "invoke build"))
+
+(require 'ruff-format)
+(add-hook 'python-mode-hook 'ruff-format-on-save-mode)
+
+
 ;; Go
 ;; (setq gofmt-command "goimports")
 ;; (require 'go-mode-autoloads)
