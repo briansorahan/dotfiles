@@ -136,9 +136,9 @@ WORKING-DIRECTORY see the documentation of the `reformatter-define' macro."
                                                                      input-file)))
                   ;; If there are no errors then we hide the error buffer
                   (delete-windows-on error-buffer))
-              (if display-errors
-                  (display-buffer error-buffer)
-                (message (concat (symbol-name name) " failed: see %s") (buffer-name error-buffer))))))
+              (let* ((error-text (string-trim (with-current-buffer error-buffer (buffer-string))))
+                     (msg (if (string-empty-p error-text) "unknown error" error-text)))
+                (message "%s failed: %s" (symbol-name name) msg)))))
       (delete-file stderr-file)
       (delete-file stdout-file))))
 
