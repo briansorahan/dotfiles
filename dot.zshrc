@@ -89,7 +89,7 @@ source $ZSH/oh-my-zsh.sh
 alias em=emacs
 mkcd() { mkdir -p "$@"; cd "$_"; }
 
-export GOPATH=$HOME/go
-if [ -d $GOPATH ]; then
-    PATH=$GOPATH/bin:$PATH
-fi
+export GH=/Volumes/BetterFS/github.com
+export BRIAN=${GH}/briansorahan
+
+source <(fzf --zsh)

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; Key-bindings
 
 ;; get rid of the menu bar
@@ -19,12 +20,12 @@
 (add-to-list 'auto-mode-alist '("Makefile.*\\'" . makefile-mode))
 
 ;; jump to definition for C++
-(require 'dumb-jump)
-(defun c++-jump-hook ()
-  (global-set-key (kbd "C-c C-j") 'dumb-jump-go)
-  (global-set-key (kbd "M-*") 'dumb-jump-back)
-  )
-(add-hook 'c++-mode-hook 'c++-jump-hook)
+;; (require 'dumb-jump)
+;; (defun c++-jump-hook ()
+;;   (global-set-key (kbd "C-c C-j") 'dumb-jump-go)
+;;   (global-set-key (kbd "M-*") 'dumb-jump-back)
+;;   )
+;; (add-hook 'c++-mode-hook 'c++-jump-hook)
 
 ;; tcl mode for expect
 (add-to-list 'auto-mode-alist '(".exp$" . tcl-mode))
@@ -54,16 +55,16 @@
 
 ;; Go
 ;; (setq gofmt-command "goimports")
-(require 'go-mode-autoloads)
-(add-hook 'before-save-hook #'gofmt-before-save)
-(global-set-key (kbd "C-c d") 'godoc-at-point)
-(setq compilation-always-kill t)
-(setq compilation-scroll-output t)
-(global-set-key (kbd "C-c C-r") 'recompile)
-(global-set-key (kbd "C-c C-k") 'kill-compilation)
-(global-set-key (kbd "C-c C-f") 'save-and-compile-program)
-(global-set-key (kbd "C-c C-i") 'save-and-install-program)
-(global-set-key (kbd "C-c C-t") 'save-and-test-program)
+;; (require 'go-mode-autoloads)
+;; (add-hook 'before-save-hook #'gofmt-before-save)
+;; (global-set-key (kbd "C-c d") 'godoc-at-point)
+;; (setq compilation-always-kill t)
+;; (setq compilation-scroll-output t)
+;; (global-set-key (kbd "C-c C-r") 'recompile)
+;; (global-set-key (kbd "C-c C-k") 'kill-compilation)
+;; (global-set-key (kbd "C-c C-f") 'save-and-compile-program)
+;; (global-set-key (kbd "C-c C-i") 'save-and-install-program)
+;; (global-set-key (kbd "C-c C-t") 'save-and-test-program)
 
 ;; save all files then run M-x compile
 (defun save-and-compile-program()
