@@ -42,3 +42,6 @@
 	submodule = log
 [pull]
 	rebase = true
+[pager]
+	branch = false
+	diff = false
