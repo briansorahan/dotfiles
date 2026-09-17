@@ -86,10 +86,14 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias cl='claude --dangerously-skip-permissions'
+alias de=deactivate # for python venv's
 alias em=emacs
+alias opr='gh pr create --web'
 mkcd() { mkdir -p "$@"; cd "$_"; }
 
 export GH=/Volumes/BetterFS/github.com
 export BRIAN=${GH}/briansorahan
 
 source <(fzf --zsh)
+
