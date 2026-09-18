@@ -94,6 +94,7 @@ mkcd() { mkdir -p "$@"; cd "$_"; }
 
 export BRIAN=${GH}/briansorahan
 export GH=/Volumes/BetterFS/github.com
+export PATH="${PATH}:$(go env GOPATH)/bin"
 export UV_LINK_MODE=copy
 
 source <(fzf --zsh)
