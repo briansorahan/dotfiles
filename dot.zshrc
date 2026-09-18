@@ -92,8 +92,8 @@ alias em=emacs
 alias opr='gh pr create --web'
 mkcd() { mkdir -p "$@"; cd "$_"; }
 
-export GH=/Volumes/BetterFS/github.com
 export BRIAN=${GH}/briansorahan
+export GH=/Volumes/BetterFS/github.com
+export UV_LINK_MODE=copy
 
 source <(fzf --zsh)
-
