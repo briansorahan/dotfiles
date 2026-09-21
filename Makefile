@@ -7,6 +7,7 @@ all:
 	install --backup --suffix .bak dot.zshrc     $(HOME)/.zshrc
 	cp dot.tmux.conf ~/.tmux.conf
 	touch $(HOME)/.zshrc_sensitive
+	mkdir -p ~/bin && cp bin/* ~/bin && chmod +x ~/bin/*
 
 clean:
 	cd $(LOAD_DIR) && rm *.elc

@@ -1,0 +1,6 @@
+#!/bin/sh
+
+orgname=$(basename $(dirname $(pwd)))
+reponame=$(basename $(pwd))
+branchname=$(git branch --show-current)
+open "https://github.com/${orgname}/${reponame}/compare/${branchname}?expand=1"
