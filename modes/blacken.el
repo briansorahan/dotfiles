@@ -1,4 +1,4 @@
-;;; blacken.el --- Reformat python buffers using the "black" formatter
+;;; blacken.el --- Reformat python buffers using the "black" formatter -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2018-2019 Artem Malyshev
 
