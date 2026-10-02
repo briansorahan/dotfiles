@@ -1,0 +1,5 @@
+Other things that are on my enverus laptop that need to get encrypted and backed up:
+- ~/.claude (bit of a PITA to have to recreate on a new machine)
+- ~/bin (I tend to put all my custom scripts in here)
+- ~/aiven-auth (bit of a PITA to have to recreate on a new machine)
+- ~/confluent-auth (bit of a PITA to have to recreate on a new machine)
